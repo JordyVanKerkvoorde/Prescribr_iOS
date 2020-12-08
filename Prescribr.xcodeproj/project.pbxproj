@@ -56,15 +56,31 @@
 		8C5AF0F7257FFFA600F480A1 /* Prescribr */ = {
 			isa = PBXGroup;
 			children = (
+				8C5AF11025800D4500F480A1 /* Controllers */,
+				8C5AF10E2580014A00F480A1 /* Storyboards */,
 				8C5AF0F8257FFFA600F480A1 /* AppDelegate.swift */,
 				8C5AF0FA257FFFA600F480A1 /* SceneDelegate.swift */,
 				8C5AF0FC257FFFA600F480A1 /* ViewController.swift */,
-				8C5AF0FE257FFFA600F480A1 /* Main.storyboard */,
 				8C5AF101257FFFA700F480A1 /* Assets.xcassets */,
 				8C5AF103257FFFA700F480A1 /* LaunchScreen.storyboard */,
 				8C5AF106257FFFA700F480A1 /* Info.plist */,
 			);
 			path = Prescribr;
+			sourceTree = "<group>";
+		};
+		8C5AF10E2580014A00F480A1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8C5AF0FE257FFFA600F480A1 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8C5AF11025800D4500F480A1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
