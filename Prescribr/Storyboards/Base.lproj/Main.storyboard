@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kb8-kO-RBe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,63 +14,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="dJ1-Xc-2bK">
+                                <rect key="frame" x="69" y="198" width="277" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USERNAME" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zSB-EH-Rdm">
+                                <rect key="frame" x="69" y="487" width="290" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASSWORD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZU6-iw-8jE">
+                                <rect key="frame" x="69" y="534" width="290" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khw-cm-tmo">
+                                <rect key="frame" x="69" y="604" width="290" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.40889925110000003" green="1" blue="0.77430693279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="LOG IN">
+                                    <color key="titleColor" red="0.068837437380000005" green="0.4100992067" blue="0.5295410156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prescribr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H6-dg-qEf">
+                                <rect key="frame" x="122" y="142" width="170" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" red="0.068837437379221753" green="0.4100992067164892" blue="0.529541015625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-33" y="115"/>
+            <point key="canvasLocation" x="-33.333333333333336" y="114.50892857142857"/>
         </scene>
-        <!--PATIENTS-->
-        <scene sceneID="4Ub-0H-Z9g">
+        <!--Drugs-->
+        <scene sceneID="xAk-p9-Mqj">
             <objects>
-                <viewController id="mbW-DN-tFG" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="x2d-et-Cox">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="JfV-A2-2mR"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="PATIENTS" image="person.3.fill" catalog="system" id="538-zS-bTa"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="25M-f4-uB9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Drugs" id="nTm-gG-nt9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="0wD-ml-gSd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Dc-YQ-yll" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="993" y="865"/>
-        </scene>
-        <!--DRUGS-->
-        <scene sceneID="DqF-Vz-aBQ">
-            <objects>
-                <viewController id="Tn8-8i-zDR" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Gbj-k6-dFG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="3W7-EQ-KDl"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="DRUGS" image="pills.fill" catalog="system" id="ZBu-rQ-DfY"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2T8-aw-mPB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="326" y="865"/>
-        </scene>
-        <!--SETTINGS-->
-        <scene sceneID="3I2-iQ-LpH">
-            <objects>
-                <viewController id="DqM-OR-RLS" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DHI-Pu-tZx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="8qu-ke-OdY"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="SETTINGS" id="VnU-BQ-bK7">
-                        <imageReference key="image" image="gearshape.2.fill" catalog="system" symbolScale="large"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ijy-jB-RSP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1655" y="865"/>
+            <point key="canvasLocation" x="812" y="704"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Gpg-WR-c15">
@@ -84,31 +77,37 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Tn8-8i-zDR" kind="relationship" relationship="viewControllers" id="WqT-4R-o1s"/>
-                        <segue destination="mbW-DN-tFG" kind="relationship" relationship="viewControllers" id="plA-m7-UXo"/>
-                        <segue destination="DqM-OR-RLS" kind="relationship" relationship="viewControllers" id="w2H-lK-Z9g"/>
+                        <segue destination="nTm-gG-nt9" kind="relationship" relationship="viewControllers" id="5Rl-X7-5Q0"/>
+                        <segue destination="96l-aH-H9X" kind="relationship" relationship="viewControllers" id="b2u-Pi-Stm"/>
+                        <segue destination="pdl-FL-bcJ" kind="relationship" relationship="viewControllers" id="9tv-BB-O8a"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fG-LP-jBv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="993" y="127"/>
         </scene>
+        <!--Patients-->
+        <scene sceneID="1m9-Rb-Def">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Patients" id="96l-aH-H9X" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="zPG-Sv-mOo"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xZk-RD-jI2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="704"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="cZd-uP-Tcr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="pdl-FL-bcJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Vyc-Gd-tQF"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gVw-sv-NFQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1150" y="704"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="gearshape.2.fill" catalog="system" width="128" height="100"/>
-        <image name="person.3.fill" catalog="system" width="128" height="61"/>
-        <image name="pills.fill" catalog="system" width="128" height="106"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="icon" width="200" height="200"/>
     </resources>
 </document>

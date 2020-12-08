@@ -7,15 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C2EFD1D25801364009C24EF /* Drugs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2EFD1C25801364009C24EF /* Drugs.storyboard */; };
+		8C2EFD2025801379009C24EF /* Patients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2EFD1F25801379009C24EF /* Patients.storyboard */; };
+		8C2EFD232580138B009C24EF /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2EFD222580138B009C24EF /* Settings.storyboard */; };
+		8C2EFD262580196D009C24EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EFD252580196D009C24EF /* LoginViewController.swift */; };
 		8C5AF0F9257FFFA600F480A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5AF0F8257FFFA600F480A1 /* AppDelegate.swift */; };
 		8C5AF0FB257FFFA600F480A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5AF0FA257FFFA600F480A1 /* SceneDelegate.swift */; };
 		8C5AF0FD257FFFA600F480A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5AF0FC257FFFA600F480A1 /* ViewController.swift */; };
 		8C5AF100257FFFA600F480A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C5AF0FE257FFFA600F480A1 /* Main.storyboard */; };
 		8C5AF102257FFFA700F480A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C5AF101257FFFA700F480A1 /* Assets.xcassets */; };
 		8C5AF105257FFFA700F480A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C5AF103257FFFA700F480A1 /* LaunchScreen.storyboard */; };
+		AFB54D77172C1D394615D087 /* Pods_Prescribr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1F352B3C6B5D76D0398E6F /* Pods_Prescribr.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3ABC47EEB26FB492439210D3 /* Pods-Prescribr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prescribr.debug.xcconfig"; path = "Target Support Files/Pods-Prescribr/Pods-Prescribr.debug.xcconfig"; sourceTree = "<group>"; };
+		5D1F352B3C6B5D76D0398E6F /* Pods_Prescribr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prescribr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C2EFD1C25801364009C24EF /* Drugs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Drugs.storyboard; sourceTree = "<group>"; };
+		8C2EFD1F25801379009C24EF /* Patients.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Patients.storyboard; sourceTree = "<group>"; };
+		8C2EFD222580138B009C24EF /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		8C2EFD252580196D009C24EF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8C5AF0F5257FFFA600F480A1 /* Prescribr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prescribr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5AF0F8257FFFA600F480A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C5AF0FA257FFFA600F480A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +35,7 @@
 		8C5AF101257FFFA700F480A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C5AF104257FFFA700F480A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C5AF106257FFFA700F480A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC795A52C7B42EEBD3406086 /* Pods-Prescribr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prescribr.release.xcconfig"; path = "Target Support Files/Pods-Prescribr/Pods-Prescribr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFB54D77172C1D394615D087 /* Pods_Prescribr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +55,8 @@
 			children = (
 				8C5AF0F7257FFFA600F480A1 /* Prescribr */,
 				8C5AF0F6257FFFA600F480A1 /* Products */,
+				E4B487F98E8EF22197A63121 /* Pods */,
+				9EEE5D6843E11490DBBF94D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +87,9 @@
 			isa = PBXGroup;
 			children = (
 				8C5AF0FE257FFFA600F480A1 /* Main.storyboard */,
+				8C2EFD1C25801364009C24EF /* Drugs.storyboard */,
+				8C2EFD1F25801379009C24EF /* Patients.storyboard */,
+				8C2EFD222580138B009C24EF /* Settings.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -79,8 +97,27 @@
 		8C5AF11025800D4500F480A1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8C2EFD252580196D009C24EF /* LoginViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9EEE5D6843E11490DBBF94D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D1F352B3C6B5D76D0398E6F /* Pods_Prescribr.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4B487F98E8EF22197A63121 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3ABC47EEB26FB492439210D3 /* Pods-Prescribr.debug.xcconfig */,
+				FC795A52C7B42EEBD3406086 /* Pods-Prescribr.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C5AF109257FFFA700F480A1 /* Build configuration list for PBXNativeTarget "Prescribr" */;
 			buildPhases = (
+				5A7E9C87B28501ADEEA16AB6 /* [CP] Check Pods Manifest.lock */,
 				8C5AF0F1257FFFA600F480A1 /* Sources */,
 				8C5AF0F2257FFFA600F480A1 /* Frameworks */,
 				8C5AF0F3257FFFA600F480A1 /* Resources */,
+				D85D355002FEB5ED5C218E58 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,7 +179,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C2EFD2025801379009C24EF /* Patients.storyboard in Resources */,
+				8C2EFD1D25801364009C24EF /* Drugs.storyboard in Resources */,
 				8C5AF105257FFFA700F480A1 /* LaunchScreen.storyboard in Resources */,
+				8C2EFD232580138B009C24EF /* Settings.storyboard in Resources */,
 				8C5AF102257FFFA700F480A1 /* Assets.xcassets in Resources */,
 				8C5AF100257FFFA600F480A1 /* Main.storyboard in Resources */,
 			);
@@ -148,11 +190,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5A7E9C87B28501ADEEA16AB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Prescribr-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D85D355002FEB5ED5C218E58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Prescribr/Pods-Prescribr-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Prescribr/Pods-Prescribr-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Prescribr/Pods-Prescribr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8C5AF0F1257FFFA600F480A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C2EFD262580196D009C24EF /* LoginViewController.swift in Sources */,
 				8C5AF0FD257FFFA600F480A1 /* ViewController.swift in Sources */,
 				8C5AF0F9257FFFA600F480A1 /* AppDelegate.swift in Sources */,
 				8C5AF0FB257FFFA600F480A1 /* SceneDelegate.swift in Sources */,
@@ -299,6 +384,7 @@
 		};
 		8C5AF10A257FFFA700F480A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ABC47EEB26FB492439210D3 /* Pods-Prescribr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -317,6 +403,7 @@
 		};
 		8C5AF10B257FFFA700F480A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC795A52C7B42EEBD3406086 /* Pods-Prescribr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

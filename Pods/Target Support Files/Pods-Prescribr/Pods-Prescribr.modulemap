@@ -1,0 +1,6 @@
+framework module Pods_Prescribr {
+  umbrella header "Pods-Prescribr-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -4,5 +4,6 @@ target 'Prescribr' do
 
   # Pods for Prescribr
 
+pod 'Alamofire', '~> 5.2'
 
 end
