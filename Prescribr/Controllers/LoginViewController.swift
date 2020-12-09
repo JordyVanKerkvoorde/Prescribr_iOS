@@ -24,6 +24,15 @@ class LoginViewController: UIViewController {
         AccountService().login(username: username.text!, password: password.text!) { (response, error) in
             if (response != nil) {
                 print(response!)
+                let defaults = UserDefaults.standard
+                defaults.set(response!, forKey: "TOKEN")
+                let token = defaults.string(forKey: "TOKEN")
+                
+                if( token != nil && token != ""){
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let mainTabBarController = storyboard.instantiateViewController(identifier: "tabbar")
+                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
+                }
             }
             if (error != nil) {
                 //print("The username and password are inorrect!")

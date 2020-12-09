@@ -9,14 +9,16 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    
+    //var window: UIWindow?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         UITabBar.appearance().barTintColor = .systemGray2
         UITabBar.appearance().tintColor = .cyan
         UITabBar.appearance().unselectedItemTintColor = .darkGray
+
+        
         return true
     }
 
@@ -34,6 +36,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
+    
+//    private func configureView() {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let defaults = UserDefaults.standard
+//        let token = defaults.string(forKey: "TOKEN")
+//        let initialViewController: UIViewController
+//        //||
+//        if(token != nil && token != ""){
+//            print("TABBAR")
+//            let mainViewController = storyboard.instantiateViewController(identifier: "tabbar")
+//            initialViewController = mainViewController
+//        }else {
+//            print("LOGIN")
+//            let loginViewController = storyboard.instantiateViewController(identifier: "login")
+//            initialViewController = loginViewController
+//            debugPrint(initialViewController)
+//        }
+//        
+//        window?.rootViewController = initialViewController
+//        window?.makeKeyAndVisible()
+//    }
 }
 
