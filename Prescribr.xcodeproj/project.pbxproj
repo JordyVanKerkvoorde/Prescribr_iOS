@@ -13,6 +13,7 @@
 		8C2EFD262580196D009C24EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EFD252580196D009C24EF /* LoginViewController.swift */; };
 		8C2EFD2E258103DB009C24EF /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EFD2D258103DB009C24EF /* AccountService.swift */; };
 		8C2EFD3625811E2D009C24EF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EFD3525811E2D009C24EF /* RegisterViewController.swift */; };
+		8C2EFD3D25813507009C24EF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EFD3C25813507009C24EF /* SettingsViewController.swift */; };
 		8C5AF0F9257FFFA600F480A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5AF0F8257FFFA600F480A1 /* AppDelegate.swift */; };
 		8C5AF0FB257FFFA600F480A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5AF0FA257FFFA600F480A1 /* SceneDelegate.swift */; };
 		8C5AF0FD257FFFA600F480A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5AF0FC257FFFA600F480A1 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 		8C2EFD252580196D009C24EF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8C2EFD2D258103DB009C24EF /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		8C2EFD3525811E2D009C24EF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		8C2EFD3C25813507009C24EF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8C5AF0F5257FFFA600F480A1 /* Prescribr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prescribr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5AF0F8257FFFA600F480A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C5AF0FA257FFFA600F480A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			children = (
 				8C2EFD252580196D009C24EF /* LoginViewController.swift */,
 				8C2EFD3525811E2D009C24EF /* RegisterViewController.swift */,
+				8C2EFD3C25813507009C24EF /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			files = (
 				8C2EFD262580196D009C24EF /* LoginViewController.swift in Sources */,
 				8C5AF0FD257FFFA600F480A1 /* ViewController.swift in Sources */,
+				8C2EFD3D25813507009C24EF /* SettingsViewController.swift in Sources */,
 				8C5AF0F9257FFFA600F480A1 /* AppDelegate.swift in Sources */,
 				8C2EFD3625811E2D009C24EF /* RegisterViewController.swift in Sources */,
 				8C2EFD2E258103DB009C24EF /* AccountService.swift in Sources */,
