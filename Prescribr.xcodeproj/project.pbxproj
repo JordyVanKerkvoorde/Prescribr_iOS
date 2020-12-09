@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		8C2EFD2025801379009C24EF /* Patients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2EFD1F25801379009C24EF /* Patients.storyboard */; };
 		8C2EFD232580138B009C24EF /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2EFD222580138B009C24EF /* Settings.storyboard */; };
 		8C2EFD262580196D009C24EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EFD252580196D009C24EF /* LoginViewController.swift */; };
+		8C2EFD2E258103DB009C24EF /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EFD2D258103DB009C24EF /* AccountService.swift */; };
 		8C5AF0F9257FFFA600F480A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5AF0F8257FFFA600F480A1 /* AppDelegate.swift */; };
 		8C5AF0FB257FFFA600F480A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5AF0FA257FFFA600F480A1 /* SceneDelegate.swift */; };
 		8C5AF0FD257FFFA600F480A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5AF0FC257FFFA600F480A1 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 		8C2EFD1F25801379009C24EF /* Patients.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Patients.storyboard; sourceTree = "<group>"; };
 		8C2EFD222580138B009C24EF /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		8C2EFD252580196D009C24EF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8C2EFD2D258103DB009C24EF /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		8C5AF0F5257FFFA600F480A1 /* Prescribr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prescribr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5AF0F8257FFFA600F480A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C5AF0FA257FFFA600F480A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C2EFD2C258103AF009C24EF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8C2EFD2D258103DB009C24EF /* AccountService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		8C5AF0EC257FFFA600F480A1 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +81,7 @@
 		8C5AF0F7257FFFA600F480A1 /* Prescribr */ = {
 			isa = PBXGroup;
 			children = (
+				8C2EFD2C258103AF009C24EF /* Network */,
 				8C5AF11025800D4500F480A1 /* Controllers */,
 				8C5AF10E2580014A00F480A1 /* Storyboards */,
 				8C5AF0F8257FFFA600F480A1 /* AppDelegate.swift */,
@@ -116,7 +127,6 @@
 				3ABC47EEB26FB492439210D3 /* Pods-Prescribr.debug.xcconfig */,
 				FC795A52C7B42EEBD3406086 /* Pods-Prescribr.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -240,6 +250,7 @@
 				8C2EFD262580196D009C24EF /* LoginViewController.swift in Sources */,
 				8C5AF0FD257FFFA600F480A1 /* ViewController.swift in Sources */,
 				8C5AF0F9257FFFA600F480A1 /* AppDelegate.swift in Sources */,
+				8C2EFD2E258103DB009C24EF /* AccountService.swift in Sources */,
 				8C5AF0FB257FFFA600F480A1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
