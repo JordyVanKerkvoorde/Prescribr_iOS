@@ -9,26 +9,45 @@ import UIKit
 
 class PatientsTableViewController: UITableViewController {
     
-    public var models: [String] = [
-        "Test",
-        "One",
-        "Two",
-        "Three"
-    ]
-
+//    public var models: [String] = [
+//        "Test",
+//        "One",
+//        "Two",
+//        "Three"
+//    ]
+    
+    
+    public var patients: [Patient] = []
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        PatientService().getPatients(){ (response, fail) in
+            if response != nil {
+                self.patients = response!
+            }
+            if fail != nil {
+                print("REQUEST FAILED")
+            }
+        
+            print(self.patients)
+            self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+            self.tableView.reloadData()
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return models.count
+        print(patients.count)
+        return patients.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = models[indexPath.row]
+        let patient = patients[indexPath.item]
+        print(patient)
+        cell.textLabel?.text = "\(patient.firstName) \(patient.lastName)"
         return cell
     }
     
@@ -40,10 +59,10 @@ class PatientsTableViewController: UITableViewController {
         if segue.identifier == "ShowPatientsDetails" {
             let detailViewController = segue.destination as! PatientsDetailViewController
             
-            let index = self.tableView.indexPathForSelectedRow!
-            let row = index.row
+            let index = (self.tableView.indexPathForSelectedRow?.item)!
+            let patient = patients[index]
             
-            detailViewController.myTitle = models[row]
+            detailViewController.myTitle = patient.firstName
         }
     }
 

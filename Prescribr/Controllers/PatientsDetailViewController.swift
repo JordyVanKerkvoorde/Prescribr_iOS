@@ -16,7 +16,6 @@ class PatientsDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         print(myTitle!)
-        PatientService().getPatients()
     }
 
 }
