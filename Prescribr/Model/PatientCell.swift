@@ -8,16 +8,10 @@
 import UIKit
 
 class PatientCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    @IBOutlet var patientName: UILabel!
+    
+    func setName(firstName: String, lastName: String){
+        patientName.text = "\(firstName) \(lastName)"
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

@@ -9,17 +9,7 @@ import UIKit
 
 class PatientsTableViewController: UITableViewController {
     
-//    public var models: [String] = [
-//        "Test",
-//        "One",
-//        "Two",
-//        "Three"
-//    ]
-    
-    
     public var patients: [Patient] = []
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,22 +22,22 @@ class PatientsTableViewController: UITableViewController {
                 print("REQUEST FAILED")
             }
         
-            print(self.patients)
-            self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+            self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ShowPatientsDetails")
             self.tableView.reloadData()
         }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(patients.count)
         return patients.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PatientCell", for: indexPath) as! PatientCell
         let patient = patients[indexPath.item]
-        print(patient)
-        cell.textLabel?.text = "\(patient.firstName) \(patient.lastName)"
+        cell.setName(firstName: patient.firstName, lastName: patient.lastName)
+        
+        
+        
         return cell
     }
     

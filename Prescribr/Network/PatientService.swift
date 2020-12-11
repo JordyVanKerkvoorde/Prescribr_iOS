@@ -25,7 +25,6 @@ class PatientService {
     typealias PatientsServiceResponse = ([Patient]?, Error?) -> Void
     
     func getPatients(completion: @escaping PatientsServiceResponse){
-        print("ONEEEE")
         AF.request(baseURL + "/patient/allpatients",
                    method: .get,
                    parameters: nil,

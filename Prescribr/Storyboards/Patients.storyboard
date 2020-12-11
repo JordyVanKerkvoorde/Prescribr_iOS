@@ -8,22 +8,52 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Patients Table View Controller-->
+        <!--Patients-->
         <scene sceneID="1tI-vz-jEA">
             <objects>
                 <tableViewController id="UpH-D2-auB" customClass="PatientsTableViewController" customModule="Prescribr" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZKF-oU-e1C">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZKF-oU-e1C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="sxF-Df-sQ0">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PatientCell" id="sxF-Df-sQ0" customClass="PatientCell" customModule="Prescribr" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sxF-Df-sQ0" id="xTY-BS-Ggn">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sxF-Df-sQ0" id="xTY-BS-Ggn">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="patient" translatesAutoresizingMaskIntoConstraints="NO" id="WUV-Xd-LHo">
+                                            <rect key="frame" x="12" y="5" width="83" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="WUV-Xd-LHo" secondAttribute="height" multiplier="83:80" id="4wg-V5-sQz"/>
+                                                <constraint firstAttribute="width" constant="83" id="79H-2q-9A3"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Cca-Xg-6Nb">
+                                            <rect key="frame" x="107" y="25" width="295" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="YZ0-td-4qo"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.40889925110000003" green="1" blue="0.77430693279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="WUV-Xd-LHo" firstAttribute="centerY" secondItem="xTY-BS-Ggn" secondAttribute="centerY" id="8AC-V2-6hN"/>
+                                        <constraint firstAttribute="trailing" secondItem="Cca-Xg-6Nb" secondAttribute="trailing" constant="12" id="hHI-gT-M7d"/>
+                                        <constraint firstItem="Cca-Xg-6Nb" firstAttribute="leading" secondItem="WUV-Xd-LHo" secondAttribute="trailing" constant="12" id="hpG-FY-ABG"/>
+                                        <constraint firstItem="Cca-Xg-6Nb" firstAttribute="centerY" secondItem="xTY-BS-Ggn" secondAttribute="centerY" id="k3C-rA-aTQ"/>
+                                        <constraint firstItem="WUV-Xd-LHo" firstAttribute="leading" secondItem="xTY-BS-Ggn" secondAttribute="leading" constant="12" id="pYI-8w-r0c"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="patientName" destination="Cca-Xg-6Nb" id="zck-Zp-R5k"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -31,7 +61,7 @@
                             <outlet property="delegate" destination="UpH-D2-auB" id="3Jc-UC-bPU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="1qD-eg-0f6"/>
+                    <navigationItem key="navigationItem" title="Patients" id="1qD-eg-0f6"/>
                     <connections>
                         <segue destination="zVo-7E-0QZ" kind="show" identifier="ShowPatientsDetails" id="FYA-hr-hCs"/>
                     </connections>
@@ -40,7 +70,7 @@
             </objects>
             <point key="canvasLocation" x="3179.7101449275365" y="889.95535714285711"/>
         </scene>
-        <!--Patients Detail View Controller-->
+        <!--Patient Details-->
         <scene sceneID="UQw-X3-vU0">
             <objects>
                 <viewController id="zVo-7E-0QZ" customClass="PatientsDetailViewController" customModule="Prescribr" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,7 +80,7 @@
                         <viewLayoutGuide key="safeArea" id="RL4-fj-eht"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6A8-kD-6jH"/>
+                    <navigationItem key="navigationItem" title="Patient Details" id="6A8-kD-6jH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6e-pg-0UU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -63,8 +93,8 @@
                     <tabBarItem key="tabBarItem" title="PATIENTS" image="person.3.fill" catalog="system" id="u9g-dk-7Se"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mMQ-Tf-t3V">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="mMQ-Tf-t3V">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -78,6 +108,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="patient" width="575" height="570"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
