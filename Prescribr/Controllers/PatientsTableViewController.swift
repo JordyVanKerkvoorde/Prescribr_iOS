@@ -7,23 +7,44 @@
 
 import UIKit
 
-class PatientsTableViewController: UIViewController {
+class PatientsTableViewController: UITableViewController {
+    
+    public var models: [String] = [
+        "Test",
+        "One",
+        "Two",
+        "Three"
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return models.count
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = models[indexPath.row]
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ShowPatientsDetails", sender: indexPath.row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowPatientsDetails" {
+            let detailViewController = segue.destination as! PatientsDetailViewController
+            
+            let index = self.tableView.indexPathForSelectedRow!
+            let row = index.row
+            
+            detailViewController.myTitle = models[row]
+        }
+    }
 
 }

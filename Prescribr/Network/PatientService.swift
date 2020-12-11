@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+class PatientService {
+    func getPatients(){
+        let defaults = UserDefaults.standard
+        print(defaults.string(forKey: "USERMAIL")!)
+    }
+}

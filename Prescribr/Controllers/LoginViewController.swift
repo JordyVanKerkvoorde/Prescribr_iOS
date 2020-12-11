@@ -29,6 +29,8 @@ class LoginViewController: UIViewController {
                 let token = defaults.string(forKey: "TOKEN")
                 
                 if( token != nil && token != ""){
+                    defaults.set(self.username.text! , forKey: "USERMAIL")
+                    
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let mainTabBarController = storyboard.instantiateViewController(identifier: "tabbar")
                     (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
