@@ -25,8 +25,14 @@ class PatientsDetailViewController: UIViewController, UITableViewDelegate, UITab
         tableView.delegate = self
         tableView.dataSource = self
         
-        print(patient!)
+        tableViewSetup()
+        
         setLabelData()
+    }
+    fileprivate func tableViewSetup() {
+        if(patient!.drugs!.isEmpty){
+            tableView.isHidden = true
+        }
     }
     
     fileprivate func setLabelData() {
