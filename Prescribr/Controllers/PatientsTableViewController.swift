@@ -52,7 +52,7 @@ class PatientsTableViewController: UITableViewController {
             let index = (self.tableView.indexPathForSelectedRow?.item)!
             let patient = patients[index]
             
-            detailViewController.myTitle = patient.firstName
+            detailViewController.patient = patient
         }
     }
 

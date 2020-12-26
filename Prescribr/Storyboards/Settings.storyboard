@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mna-kS-LIh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bOB-j2-bWO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--SETTINGS-->
+        <!--Settings-->
         <scene sceneID="YuE-dI-Oek">
             <objects>
                 <viewController id="mna-kS-LIh" customClass="SettingsViewController" customModule="Prescribr" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,14 +27,61 @@
                                     <action selector="onLogout:" destination="mna-kS-LIh" eventType="touchUpInside" id="Qst-Ne-40J"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnz-0r-QbK">
+                                <rect key="frame" x="44" y="629" width="327" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.40889925110000003" green="1" blue="0.77430693279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="ACCOUNT SETTINGS">
+                                    <color key="titleColor" red="0.068837437380000005" green="0.4100992067" blue="0.5295410156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8tR-ch-RhE" kind="show" id="Tqp-Cg-Ztt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7qT-Lj-4Td"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="SETTINGS" image="gearshape.2.fill" catalog="system" id="cuc-dk-ybJ"/>
+                    <navigationItem key="navigationItem" title="Settings" id="iIp-Ap-5Pd"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHJ-DW-PTv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2563.768115942029" y="864.50892857142856"/>
+        </scene>
+        <!--Account Settings-->
+        <scene sceneID="wHM-rr-7Zm">
+            <objects>
+                <viewController id="8tR-ch-RhE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hXE-wi-mIY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wC3-by-viV"/>
+                        <color key="backgroundColor" red="0.40889925110000003" green="1" blue="0.77430693279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Account Settings" id="Yfn-IH-5ED"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PQs-dT-zlL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3400" y="865"/>
+        </scene>
+        <!--SETTINGS-->
+        <scene sceneID="M8d-Yv-EyJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bOB-j2-bWO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="SETTINGS" image="gearshape.2.fill" catalog="system" id="cuc-dk-ybJ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="l3A-Ku-vRq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mna-kS-LIh" kind="relationship" relationship="rootViewController" id="hjB-NL-tu0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="df8-s4-bOo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1653.6231884057972" y="864.50892857142856"/>
         </scene>

@@ -34,13 +34,12 @@ class PatientService {
                 
                 switch response.result {
                     case .success:
-                        //print("SUCCESRESPONSE")
                         //print(response.value!)
                         var patients:[Patient] = []
                         for patient in response.value as! [Dictionary<String, AnyObject>] {
                             patients.append(Patient.from(patient as NSDictionary)!)
                         }
-                        //print(patients)
+                        print(patients)
                         completion(patients, nil)
                     case let .failure(error):
                         //print("FAILRESPONSE")

@@ -15,7 +15,7 @@ struct Patient: Mappable {
     var dateOfBirth: String
     var heightCM: Int
     var weightKG: Int
-    //var drugs: [Drug]? //change to struct type
+    var drugs: [String]? //change to struct type
     
     
     init(map: Mapper) throws {
@@ -25,6 +25,6 @@ struct Patient: Mappable {
         try dateOfBirth = map.from("dateOfBirth")
         try heightCM = map.from("heightCM")
         try weightKG = map.from("weightKG")
-        //try drugs = map.from("")
+        try drugs = map.from("drugs")
     }
 }
