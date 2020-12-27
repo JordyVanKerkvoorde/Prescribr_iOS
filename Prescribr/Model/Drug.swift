@@ -8,7 +8,16 @@
 import Foundation
 import Mapper
 
-//class Drug : Mappable{
-//    var id: String?
-//    var name: String?
-//}
+struct Drug : Mappable{
+    var id: String
+    var name: String
+    var description: String
+    var negativeInteractions: [String]
+    
+    init(map: Mapper) throws {
+        try id = map.from("id")
+        try name = map.from("name")
+        try description = map.from("description")
+        try negativeInteractions = map.from("negativeInteractions")
+    }
+}
