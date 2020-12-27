@@ -34,8 +34,12 @@ class DrugService {
             .responseJSON{ (response) in
                 switch response.result {
                     case .success:
-                        print(response.value!)
-                        completion(nil, nil)
+                        var drugs: [Drug] = []
+                        for drug in response.value as! [Dictionary<String, AnyObject>] {
+                            drugs.append(Drug.from(drug as NSDictionary)!)
+                        }
+                        print(drugs)
+                        completion(drugs, nil)
                 case let .failure(error):
                     debugPrint(error)
                     completion(nil, error)
