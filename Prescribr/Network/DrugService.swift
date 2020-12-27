@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 import Mapper
 
-class DrugServive {
+class DrugService {
     let baseURL = "https://prescribrapi.azurewebsites.net/api"
     
     let defaults = UserDefaults.standard
@@ -26,7 +26,7 @@ class DrugServive {
     typealias DrugServiceResponse = (Drug?, Error?) -> Void
     
     func getAllDrugs(completion: @escaping AllDrugServiceResponse) {
-        AF.request(baseURL + "/drugs/alldrugs",
+        AF.request(baseURL + "/drug/alldrugs",
                    method: .get,
                    parameters: nil,
                    headers: headers)

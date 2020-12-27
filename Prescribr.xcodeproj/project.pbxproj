@@ -22,6 +22,7 @@
 		8C2EFD5A25843679009C24EF /* PatientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EFD5925843679009C24EF /* PatientCell.swift */; };
 		8C2EFD5D2597C262009C24EF /* PatientDrugCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EFD5C2597C262009C24EF /* PatientDrugCell.swift */; };
 		8C2EFD602598CB57009C24EF /* DrugService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EFD5F2598CB57009C24EF /* DrugService.swift */; };
+		8C2EFD632598CF04009C24EF /* DrugsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EFD622598CF04009C24EF /* DrugsTableViewController.swift */; };
 		8C5AF0F9257FFFA600F480A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5AF0F8257FFFA600F480A1 /* AppDelegate.swift */; };
 		8C5AF0FB257FFFA600F480A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5AF0FA257FFFA600F480A1 /* SceneDelegate.swift */; };
 		8C5AF0FD257FFFA600F480A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5AF0FC257FFFA600F480A1 /* ViewController.swift */; };
@@ -49,6 +50,7 @@
 		8C2EFD5925843679009C24EF /* PatientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientCell.swift; sourceTree = "<group>"; };
 		8C2EFD5C2597C262009C24EF /* PatientDrugCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDrugCell.swift; sourceTree = "<group>"; };
 		8C2EFD5F2598CB57009C24EF /* DrugService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugService.swift; sourceTree = "<group>"; };
+		8C2EFD622598CF04009C24EF /* DrugsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsTableViewController.swift; sourceTree = "<group>"; };
 		8C5AF0F5257FFFA600F480A1 /* Prescribr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prescribr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5AF0F8257FFFA600F480A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C5AF0FA257FFFA600F480A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				8C2EFD3C25813507009C24EF /* SettingsViewController.swift */,
 				8C2EFD3F2583BB80009C24EF /* PatientsTableViewController.swift */,
 				8C2EFD422583BC11009C24EF /* PatientsDetailViewController.swift */,
+				8C2EFD622598CF04009C24EF /* DrugsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				8C2EFD602598CB57009C24EF /* DrugService.swift in Sources */,
 				8C5AF0FD257FFFA600F480A1 /* ViewController.swift in Sources */,
 				8C2EFD3D25813507009C24EF /* SettingsViewController.swift in Sources */,
+				8C2EFD632598CF04009C24EF /* DrugsTableViewController.swift in Sources */,
 				8C2EFD5A25843679009C24EF /* PatientCell.swift in Sources */,
 				8C5AF0F9257FFFA600F480A1 /* AppDelegate.swift in Sources */,
 				8C2EFD522583E9A6009C24EF /* Patient.swift in Sources */,
