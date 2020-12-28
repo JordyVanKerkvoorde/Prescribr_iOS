@@ -3,11 +3,12 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Drugs Table View Controller-->
+        <!--Drugs-->
         <scene sceneID="L7F-nq-RQw">
             <objects>
                 <tableViewController id="IPO-eM-n8o" customClass="DrugsTableViewController" customModule="Prescribr" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,14 +36,87 @@
                             <outlet property="delegate" destination="IPO-eM-n8o" id="PHI-8e-PxJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="AfJ-2Y-hKQ"/>
+                    <navigationItem key="navigationItem" title="Drugs" id="AfJ-2Y-hKQ"/>
                     <connections>
                         <outlet property="searchBar" destination="fqG-ZV-kAg" id="V53-M6-ScY"/>
+                        <segue destination="7BO-gm-qYb" kind="show" identifier="ShowDrugDetails" id="T8Y-UQ-xyR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJv-nG-WWB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2105.7971014492755" y="877.90178571428567"/>
+        </scene>
+        <!--Drug Details View Controller-->
+        <scene sceneID="Qcb-CW-gyM">
+            <objects>
+                <viewController id="7BO-gm-qYb" customClass="DrugDetailsViewController" customModule="Prescribr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VTT-mL-dGn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" id="IdL-Tf-6g9">
+                                <rect key="frame" x="10" y="150" width="394" height="653"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaU-bg-gZH">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Negative interactions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EP6-Vq-YNc" customClass="PaddingLabel" customModule="PaddingLabel">
+                                        <rect key="frame" x="0.0" y="25.5" width="394" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <color key="highlightedColor" systemColor="labelColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="0oU-fw-5RD">
+                                        <rect key="frame" x="0.0" y="81" width="394" height="56"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WbJ-kB-kmV">
+                                        <rect key="frame" x="0.0" y="141.5" width="394" height="511.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="drug" id="BbF-EO-8Jb">
+                                                <rect key="frame" x="0.0" y="28" width="394" height="43.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BbF-EO-8Jb" id="ABg-9h-wxG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zoq-9J-8JC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zoq-9J-8JC" firstAttribute="bottom" secondItem="IdL-Tf-6g9" secondAttribute="bottom" constant="10" id="LDQ-gk-Ap1"/>
+                            <constraint firstItem="IdL-Tf-6g9" firstAttribute="leading" secondItem="zoq-9J-8JC" secondAttribute="leading" constant="10" id="Lvj-0A-7D5"/>
+                            <constraint firstItem="IdL-Tf-6g9" firstAttribute="top" secondItem="zoq-9J-8JC" secondAttribute="top" constant="10" id="Ozl-dK-KfU"/>
+                            <constraint firstItem="zoq-9J-8JC" firstAttribute="trailing" secondItem="IdL-Tf-6g9" secondAttribute="trailing" constant="10" id="R75-mO-f5U"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LgR-YN-U0q"/>
+                    <connections>
+                        <outlet property="drugDescription" destination="NaU-bg-gZH" id="zth-pg-T47"/>
+                        <outlet property="tableView" destination="WbJ-kB-kmV" id="mDG-HQ-Pdo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Qm-OB-rIq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2989.8550724637685" y="877.90178571428567"/>
         </scene>
         <!--DRUGS-->
         <scene sceneID="0sV-cN-xAJ">
@@ -51,8 +125,8 @@
                     <tabBarItem key="tabBarItem" title="DRUGS" image="pills.fill" catalog="system" id="zyP-Kz-nS2"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Ei-6T-SG0">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="2Ei-6T-SG0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -65,8 +139,16 @@
             <point key="canvasLocation" x="1195.6521739130435" y="877.90178571428567"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="EP6-Vq-YNc">
+            <size key="intrinsicContentSize" width="255" height="50"/>
+        </designable>
+    </designables>
     <resources>
         <image name="pills.fill" catalog="system" width="128" height="106"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

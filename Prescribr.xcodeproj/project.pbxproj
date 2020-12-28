@@ -29,6 +29,7 @@
 		8C5AF100257FFFA600F480A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C5AF0FE257FFFA600F480A1 /* Main.storyboard */; };
 		8C5AF102257FFFA700F480A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C5AF101257FFFA700F480A1 /* Assets.xcassets */; };
 		8C5AF105257FFFA700F480A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C5AF103257FFFA700F480A1 /* LaunchScreen.storyboard */; };
+		8C606776259A530C00A15DEB /* DrugDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C606775259A530C00A15DEB /* DrugDetailsViewController.swift */; };
 		AFB54D77172C1D394615D087 /* Pods_Prescribr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1F352B3C6B5D76D0398E6F /* Pods_Prescribr.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		8C5AF101257FFFA700F480A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C5AF104257FFFA700F480A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C5AF106257FFFA700F480A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C606775259A530C00A15DEB /* DrugDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugDetailsViewController.swift; sourceTree = "<group>"; };
 		FC795A52C7B42EEBD3406086 /* Pods-Prescribr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prescribr.release.xcconfig"; path = "Target Support Files/Pods-Prescribr/Pods-Prescribr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +152,7 @@
 				8C2EFD3F2583BB80009C24EF /* PatientsTableViewController.swift */,
 				8C2EFD422583BC11009C24EF /* PatientsDetailViewController.swift */,
 				8C2EFD622598CF04009C24EF /* DrugsTableViewController.swift */,
+				8C606775259A530C00A15DEB /* DrugDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				8C2EFD462583D1D4009C24EF /* PatientService.swift in Sources */,
 				8C2EFD3625811E2D009C24EF /* RegisterViewController.swift in Sources */,
 				8C2EFD5D2597C262009C24EF /* PatientDrugCell.swift in Sources */,
+				8C606776259A530C00A15DEB /* DrugDetailsViewController.swift in Sources */,
 				8C2EFD2E258103DB009C24EF /* AccountService.swift in Sources */,
 				8C5AF0FB257FFFA600F480A1 /* SceneDelegate.swift in Sources */,
 				8C2EFD432583BC11009C24EF /* PatientsDetailViewController.swift in Sources */,

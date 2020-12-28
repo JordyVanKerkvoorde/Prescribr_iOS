@@ -56,4 +56,18 @@ class DrugsTableViewController: UITableViewController, UISearchBarDelegate {
         
         self.tableView.reloadData()
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ShowDrugDetails", sender: indexPath.row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "ShowDrugDetails"){
+            let detailViewController = segue.destination as! DrugDetailsViewController
+            let index = (self.tableView.indexPathForSelectedRow?.item)!
+            let drug = filteredDrugs[index]
+            
+            detailViewController.drug = drug
+        }
+    }
 }

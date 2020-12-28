@@ -36,8 +36,6 @@ class PatientsTableViewController: UITableViewController {
         let patient = patients[indexPath.item]
         cell.setName(firstName: patient.firstName, lastName: patient.lastName)
         
-        
-        
         return cell
     }
     
