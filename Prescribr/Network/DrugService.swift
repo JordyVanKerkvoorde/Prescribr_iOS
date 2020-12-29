@@ -50,4 +50,33 @@ class DrugService {
     func getDrug(id: String, completion: @escaping DrugServiceResponse) {
         
     }
+    
+    func getDrugList(idList: [String], completion: @escaping AllDrugServiceResponse){
+        
+        let idList = IdList(idList: idList)
+        
+        AF.request(baseURL + "/drug/drugslist",
+                   method: .post,
+                   parameters: idList,
+                   encoder: JSONParameterEncoder.default,
+                   headers: headers)
+            .validate()
+            .responseJSON{ (response) in
+                switch response.result {
+                    case .success:
+                        var drugs: [Drug] = []
+                        for drug in response.value as! [Dictionary<String, AnyObject>] {
+                            drugs.append(Drug.from(drug as NSDictionary)!)
+                        }
+                        completion(drugs, nil)
+                    case let .failure(error):
+                        debugPrint(error)
+                        completion(nil, error)
+                }
+            }
+    }
+}
+
+struct IdList: Encodable {
+    let idList:[String]
 }

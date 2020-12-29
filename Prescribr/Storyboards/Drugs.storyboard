@@ -111,6 +111,7 @@
                     <navigationItem key="navigationItem" id="LgR-YN-U0q"/>
                     <connections>
                         <outlet property="drugDescription" destination="NaU-bg-gZH" id="zth-pg-T47"/>
+                        <outlet property="searchBar" destination="0oU-fw-5RD" id="8cm-uT-IlL"/>
                         <outlet property="tableView" destination="WbJ-kB-kmV" id="mDG-HQ-Pdo"/>
                     </connections>
                 </viewController>

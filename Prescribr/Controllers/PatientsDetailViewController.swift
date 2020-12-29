@@ -19,6 +19,7 @@ class PatientsDetailViewController: UIViewController, UITableViewDelegate, UITab
     
     @IBOutlet var tableView: UITableView!
     
+    var drugs: [Drug] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,19 @@ class PatientsDetailViewController: UIViewController, UITableViewDelegate, UITab
         tableViewSetup()
         
         setLabelData()
+        //if(patient?.drugs != nil){
+            DrugService().getDrugList(idList: (patient?.drugs)!){ (success, fail) in
+                if success != nil {
+                    self.drugs = success ?? []
+                }
+                if fail != nil {
+                    print("Request failed")
+                }
+                self.tableView.reloadData()
+            }
+        //}
     }
+    
     fileprivate func tableViewSetup() {
         if(patient!.drugs!.isEmpty){
             tableView.isHidden = true
@@ -44,13 +57,13 @@ class PatientsDetailViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return patient!.drugs?.count ?? 0
+        return drugs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PatientDrugCell", for: indexPath) as! PatientDrugCell
-        let drugs = patient?.drugs
-        cell.setDrugname(name: drugs?[indexPath.item] ?? "")
+        
+        cell.setDrugname(name: drugs[indexPath.item].name)
         
         
         

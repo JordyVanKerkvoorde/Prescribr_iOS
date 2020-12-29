@@ -39,7 +39,7 @@ class PatientService {
                         for patient in response.value as! [Dictionary<String, AnyObject>] {
                             patients.append(Patient.from(patient as NSDictionary)!)
                         }
-                        print(patients)
+                        //print(patients)
                         completion(patients, nil)
                     case let .failure(error):
                         //print("FAILRESPONSE")
