@@ -15,20 +15,23 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LSM-hR-hBs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="fqG-ZV-kAg">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" barStyle="black" placeholder="Search..." id="fqG-ZV-kAg">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="barTintColor" systemColor="secondaryLabelColor"/>
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="drug" id="Szu-e9-bFj">
-                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="84" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Szu-e9-bFj" id="eGB-e0-wbA">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.40889925110000003" green="1" blue="0.77430693279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -54,45 +57,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" id="IdL-Tf-6g9">
-                                <rect key="frame" x="10" y="150" width="394" height="653"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IdL-Tf-6g9">
+                                <rect key="frame" x="0.0" y="150" width="414" height="663"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaU-bg-gZH">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaU-bg-gZH" customClass="PaddingLabel" customModule="PaddingLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="30.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Negative interactions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EP6-Vq-YNc" customClass="PaddingLabel" customModule="PaddingLabel">
-                                        <rect key="frame" x="0.0" y="25.5" width="394" height="50"/>
+                                        <rect key="frame" x="0.0" y="35.5" width="414" height="60"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <color key="highlightedColor" systemColor="labelColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="0oU-fw-5RD">
-                                        <rect key="frame" x="0.0" y="81" width="394" height="56"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </searchBar>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WbJ-kB-kmV">
-                                        <rect key="frame" x="0.0" y="141.5" width="394" height="511.5"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <rect key="frame" x="0.0" y="100.5" width="414" height="562.5"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <searchBar key="tableHeaderView" contentMode="redraw" barStyle="black" placeholder="Search..." id="0oU-fw-5RD">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <color key="barTintColor" systemColor="secondaryLabelColor"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </searchBar>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="drug" id="BbF-EO-8Jb">
-                                                <rect key="frame" x="0.0" y="28" width="394" height="43.5"/>
+                                                <rect key="frame" x="0.0" y="84" width="414" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BbF-EO-8Jb" id="ABg-9h-wxG">
-                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
+                                                <color key="backgroundColor" red="0.40889925110000003" green="1" blue="0.77430693279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -100,19 +116,19 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zoq-9J-8JC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.40889925110000003" green="1" blue="0.77430693279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zoq-9J-8JC" firstAttribute="bottom" secondItem="IdL-Tf-6g9" secondAttribute="bottom" constant="10" id="LDQ-gk-Ap1"/>
-                            <constraint firstItem="IdL-Tf-6g9" firstAttribute="leading" secondItem="zoq-9J-8JC" secondAttribute="leading" constant="10" id="Lvj-0A-7D5"/>
+                            <constraint firstItem="zoq-9J-8JC" firstAttribute="bottom" secondItem="IdL-Tf-6g9" secondAttribute="bottom" id="LDQ-gk-Ap1"/>
+                            <constraint firstItem="IdL-Tf-6g9" firstAttribute="leading" secondItem="zoq-9J-8JC" secondAttribute="leading" id="Lvj-0A-7D5"/>
                             <constraint firstItem="IdL-Tf-6g9" firstAttribute="top" secondItem="zoq-9J-8JC" secondAttribute="top" constant="10" id="Ozl-dK-KfU"/>
-                            <constraint firstItem="zoq-9J-8JC" firstAttribute="trailing" secondItem="IdL-Tf-6g9" secondAttribute="trailing" constant="10" id="R75-mO-f5U"/>
+                            <constraint firstItem="zoq-9J-8JC" firstAttribute="trailing" secondItem="IdL-Tf-6g9" secondAttribute="trailing" id="R75-mO-f5U"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LgR-YN-U0q"/>
                     <connections>
                         <outlet property="drugDescription" destination="NaU-bg-gZH" id="zth-pg-T47"/>
-                        <outlet property="searchBar" destination="0oU-fw-5RD" id="8cm-uT-IlL"/>
-                        <outlet property="tableView" destination="WbJ-kB-kmV" id="mDG-HQ-Pdo"/>
+                        <outlet property="searchBar" destination="0oU-fw-5RD" id="fdf-Wy-Mxm"/>
+                        <outlet property="tableView" destination="WbJ-kB-kmV" id="Pmi-cH-klg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Qm-OB-rIq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -129,6 +145,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="2Ei-6T-SG0">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" systemColor="systemIndigoColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -142,7 +161,10 @@
     </scenes>
     <designables>
         <designable name="EP6-Vq-YNc">
-            <size key="intrinsicContentSize" width="255" height="50"/>
+            <size key="intrinsicContentSize" width="258" height="60"/>
+        </designable>
+        <designable name="NaU-bg-gZH">
+            <size key="intrinsicContentSize" width="61.5" height="30.5"/>
         </designable>
     </designables>
     <resources>
@@ -150,8 +172,11 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

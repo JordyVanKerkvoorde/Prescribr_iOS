@@ -9,66 +9,97 @@
     </dependencies>
     <scenes>
         <!--Patients-->
-        <scene sceneID="1tI-vz-jEA">
+        <scene sceneID="WKf-3X-MXn">
             <objects>
-                <tableViewController id="UpH-D2-auB" customClass="PatientsTableViewController" customModule="Prescribr" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZKF-oU-e1C">
+                <viewController id="zLR-vQ-blG" customClass="PatientsTableViewController" customModule="Prescribr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7ns-bG-xxn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NN1-rT-31a">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eq7-t9-C2l">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="663"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="separatorColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <searchBar key="tableHeaderView" contentMode="redraw" barStyle="black" placeholder="Search..." id="LM7-wC-S8f">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <color key="barTintColor" systemColor="secondaryLabelColor"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </searchBar>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PatientCell" id="mG4-aY-l48" customClass="PatientCell" customModule="Prescribr" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="72" width="414" height="90"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.89999997615814209" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mG4-aY-l48" id="gUU-sg-LDT">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="patient" translatesAutoresizingMaskIntoConstraints="NO" id="tec-ct-ZAU">
+                                                            <rect key="frame" x="12" y="5" width="83" height="80"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="83" id="6Kc-Fn-DRb"/>
+                                                                <constraint firstAttribute="width" secondItem="tec-ct-ZAU" secondAttribute="height" multiplier="83:80" id="p38-6e-hn3"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="CdP-g1-lm4">
+                                                            <rect key="frame" x="107" y="25" width="295" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="iJe-1h-wgA"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.40889925110000003" green="1" blue="0.77430693279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="tec-ct-ZAU" firstAttribute="centerY" secondItem="gUU-sg-LDT" secondAttribute="centerY" id="2Za-go-uT2"/>
+                                                        <constraint firstAttribute="trailing" secondItem="CdP-g1-lm4" secondAttribute="trailing" constant="12" id="Cq0-fN-Hkt"/>
+                                                        <constraint firstItem="CdP-g1-lm4" firstAttribute="leading" secondItem="tec-ct-ZAU" secondAttribute="trailing" constant="12" id="eWC-eY-S1c"/>
+                                                        <constraint firstItem="tec-ct-ZAU" firstAttribute="leading" secondItem="gUU-sg-LDT" secondAttribute="leading" constant="12" id="iSy-e0-5l9"/>
+                                                        <constraint firstItem="CdP-g1-lm4" firstAttribute="centerY" secondItem="gUU-sg-LDT" secondAttribute="centerY" id="oqs-lW-5rr"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="patientName" destination="CdP-g1-lm4" id="fvn-GC-C7y"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2r-s0-RmM">
+                                        <rect key="frame" x="0.0" y="683" width="414" height="42"/>
+                                        <color key="backgroundColor" red="0.40889925110000003" green="1" blue="0.77430693279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <state key="normal" title="NEW PATIENT">
+                                            <color key="titleColor" red="0.068837437380000005" green="0.4100992067" blue="0.5295410156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VZ7-9b-k3z"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="separatorColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PatientCell" id="sxF-Df-sQ0" customClass="PatientCell" customModule="Prescribr" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sxF-Df-sQ0" id="xTY-BS-Ggn">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="patient" translatesAutoresizingMaskIntoConstraints="NO" id="WUV-Xd-LHo">
-                                            <rect key="frame" x="12" y="5" width="83" height="80"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="WUV-Xd-LHo" secondAttribute="height" multiplier="83:80" id="4wg-V5-sQz"/>
-                                                <constraint firstAttribute="width" constant="83" id="79H-2q-9A3"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Cca-Xg-6Nb">
-                                            <rect key="frame" x="107" y="25" width="295" height="40"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="YZ0-td-4qo"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" red="0.40889925110000003" green="1" blue="0.77430693279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <constraints>
-                                        <constraint firstItem="WUV-Xd-LHo" firstAttribute="centerY" secondItem="xTY-BS-Ggn" secondAttribute="centerY" id="8AC-V2-6hN"/>
-                                        <constraint firstAttribute="trailing" secondItem="Cca-Xg-6Nb" secondAttribute="trailing" constant="12" id="hHI-gT-M7d"/>
-                                        <constraint firstItem="Cca-Xg-6Nb" firstAttribute="leading" secondItem="WUV-Xd-LHo" secondAttribute="trailing" constant="12" id="hpG-FY-ABG"/>
-                                        <constraint firstItem="Cca-Xg-6Nb" firstAttribute="centerY" secondItem="xTY-BS-Ggn" secondAttribute="centerY" id="k3C-rA-aTQ"/>
-                                        <constraint firstItem="WUV-Xd-LHo" firstAttribute="leading" secondItem="xTY-BS-Ggn" secondAttribute="leading" constant="12" id="pYI-8w-r0c"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="patientName" destination="Cca-Xg-6Nb" id="zck-Zp-R5k"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="UpH-D2-auB" id="Qfq-nT-idQ"/>
-                            <outlet property="delegate" destination="UpH-D2-auB" id="3Jc-UC-bPU"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Patients" id="1qD-eg-0f6"/>
+                        <constraints>
+                            <constraint firstItem="VZ7-9b-k3z" firstAttribute="trailing" secondItem="NN1-rT-31a" secondAttribute="trailing" id="9gH-Sm-5jp"/>
+                            <constraint firstItem="NN1-rT-31a" firstAttribute="leading" secondItem="VZ7-9b-k3z" secondAttribute="leading" id="btC-jQ-fMR"/>
+                            <constraint firstItem="VZ7-9b-k3z" firstAttribute="bottom" secondItem="NN1-rT-31a" secondAttribute="bottom" id="oOz-RC-N1F"/>
+                            <constraint firstItem="NN1-rT-31a" firstAttribute="top" secondItem="VZ7-9b-k3z" secondAttribute="top" id="xXb-Xk-IIP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Patients" id="lzD-fX-Tmf"/>
                     <connections>
-                        <segue destination="zVo-7E-0QZ" kind="show" identifier="ShowPatientsDetails" id="FYA-hr-hCs"/>
+                        <outlet property="searchBar" destination="LM7-wC-S8f" id="idE-m8-FMc"/>
+                        <outlet property="tableView" destination="eq7-t9-C2l" id="8Uy-ac-m2U"/>
+                        <segue destination="zVo-7E-0QZ" kind="show" identifier="ShowPatientsDetails" id="yUh-LD-yeB"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AoF-eY-WLD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tR3-H5-koc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3179.7101449275365" y="889.95535714285711"/>
+            <point key="canvasLocation" x="3139" y="890"/>
         </scene>
         <!--Patient Details-->
         <scene sceneID="UQw-X3-vU0">
@@ -167,7 +198,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RL4-fj-eht"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.40889925110000003" green="1" blue="0.77430693279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Nzd-Aq-GPv" firstAttribute="leading" secondItem="RL4-fj-eht" secondAttribute="leading" constant="10" id="D1V-3z-Ax3"/>
                             <constraint firstItem="RL4-fj-eht" firstAttribute="bottom" secondItem="Nzd-Aq-GPv" secondAttribute="bottom" constant="425" id="UCO-cX-kxq"/>
@@ -199,10 +230,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="mMQ-Tf-t3V">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.068837437380000005" green="0.4100992067" blue="0.5295410156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="UpH-D2-auB" kind="relationship" relationship="rootViewController" id="ixI-q4-rcY"/>
+                        <segue destination="zLR-vQ-blG" kind="relationship" relationship="rootViewController" id="ius-W0-9DC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hd8-AL-Bnc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -213,6 +247,9 @@
     <resources>
         <image name="patient" width="575" height="570"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
