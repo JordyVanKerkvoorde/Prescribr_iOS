@@ -23,6 +23,7 @@ class PatientService {
     }
     
     typealias PatientsServiceResponse = ([Patient]?, Error?) -> Void
+    typealias PatientServiceResponse = (Patient?, Error?) -> Void
     
     func getPatients(completion: @escaping PatientsServiceResponse){
         AF.request(baseURL + "/patient/allpatients",
@@ -34,15 +35,50 @@ class PatientService {
                 
                 switch response.result {
                     case .success:
-                        //print(response.value!)
                         var patients:[Patient] = []
                         for patient in response.value as! [Dictionary<String, AnyObject>] {
                             patients.append(Patient.from(patient as NSDictionary)!)
                         }
-                        //print(patients)
                         completion(patients, nil)
                     case let .failure(error):
-                        //print("FAILRESPONSE")
+                        debugPrint(error)
+                        completion(nil, error)
+                }
+            }
+    }
+    
+    func addPatient(patientDTO: PatientDTO, completion: @escaping PatientServiceResponse){
+        AF.request(baseURL + "/patient/addpatient",
+                   method: .post,
+                   parameters: patientDTO,
+                   encoder: JSONParameterEncoder.default,
+                   headers: headers)
+            .validate()
+            .responseJSON{ response in
+                switch response.result {
+                    case .success:
+                        let patient = Patient.from(response.value as! NSDictionary)
+                        completion(patient, nil)
+                    case let .failure(error):
+                        debugPrint(error)
+                        completion(nil, error)
+                }
+            }
+    }
+    
+    func updatePatient(patient: Patient, completion: @escaping PatientServiceResponse){
+        AF.request(baseURL + "/patient/updatepatient",
+                   method: .post,
+                   parameters: patient,
+                   encoder: JSONParameterEncoder.default,
+                   headers: headers)
+            .validate()
+            .responseJSON{ response in
+                switch response.result{
+                    case .success:
+                        let patient = Patient.from(response.value as! NSDictionary)
+                        completion(patient, nil)
+                    case let .failure(error):
                         debugPrint(error)
                         completion(nil, error)
                 }

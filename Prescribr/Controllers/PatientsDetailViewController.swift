@@ -6,18 +6,19 @@
 //
 
 import UIKit
+import PaddingLabel
 
 class PatientsDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var patient: Patient?
-
+    
     @IBOutlet var firstname: UILabel!
     @IBOutlet var lastname: UILabel!
     @IBOutlet var dateOfBirth: UILabel!
     @IBOutlet var height: UILabel!
     @IBOutlet var weight: UILabel!
-    
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var drugsTitle: PaddingLabel!
     
     var drugs: [Drug] = []
     
@@ -38,6 +39,10 @@ class PatientsDetailViewController: UIViewController, UITableViewDelegate, UITab
                     print("Request failed")
                 }
                 self.tableView.reloadData()
+                if(self.drugs.isEmpty){
+                    self.tableView.isHidden = true
+                    self.drugsTitle.isHidden = true
+                }
             }
         //}
     }
@@ -49,25 +54,36 @@ class PatientsDetailViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     fileprivate func setLabelData() {
-        firstname.text = patient!.firstName
-        lastname.text = patient!.lastName
-        dateOfBirth.text = patient!.dateOfBirth
-        height.text = String(patient!.heightCM)
-        weight.text = String(patient!.weightKG)
+        firstname.text = "FIRSTNAME: " + patient!.firstName
+        lastname.text = "LASTNAME: " + patient!.lastName
+        dateOfBirth.text = "DATE OF BIRTH: " + convertDate(datestring: patient!.dateOfBirth)
+        height.text = "HEIGHT: " + String(patient!.heightCM)
+        weight.text = "WEIGHT: " + String(patient!.weightKG)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //print(drugs)
+        //print(drugs.count)
         return drugs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PatientDrugCell", for: indexPath) as! PatientDrugCell
-        
+        //print(drugs[indexPath.item].name)
         cell.setDrugname(name: drugs[indexPath.item].name)
         
         
         
         return cell
     }
-
+    
+    func convertDate(datestring: String) -> String{
+        let date = datestring.split(separator: "T")
+        let dateArr = date[0].split(separator: "-")
+        let year = dateArr[0]
+        let month = dateArr[1]
+        let day = dateArr[2]
+        
+        return "\(day)/\(month)/\(year)"
+    }
 }

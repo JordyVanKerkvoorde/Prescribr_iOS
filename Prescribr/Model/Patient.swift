@@ -8,14 +8,14 @@
 import Foundation
 import Mapper
 
-struct Patient: Mappable {
+struct Patient: Mappable, Encodable {
     var id: String
     var firstName: String
     var lastName: String
     var dateOfBirth: String
     var heightCM: Int
     var weightKG: Int
-    var drugs: [String]? //change to struct type
+    var drugs: [String]?
     
     
     init(map: Mapper) throws {
