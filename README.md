@@ -32,7 +32,5 @@ end
 ## Knows issues
 There are still some issues in the app. Most of the issues have been solved in other components of the app, demonstrating that I do know how to fix them but due to time limitations I was not able to fix them all.
 
-- When creating a new user the new user isn't displayed in the user list
-  - **solve:** This needs a delegate to observe the user
-- When adding a drug to a patient it isnt persisted
-  - **solve:** adding a second delegate for the patient list
+- When adding a drug to a patient it isnt persisted on the device (backend registration works so on reload it shows)
+  - **solve:** adding a second delegate for the patient list to update its modified patient
