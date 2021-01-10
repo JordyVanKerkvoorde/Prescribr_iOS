@@ -117,15 +117,15 @@ class PatientsDetailViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func prescribeDrug(drug: Drug){
-        print(drug)
+        //print(drug)
         self.drugs.append(drug)
         self.patient?.drugs?.append(drug.id)
         //do network call
         PatientService().updatePatient(patient: patient!){ (success, fail) in
             if(success != nil){
-                print(success!)
+                //print(success!)
                 //redo checks
-                print("ASSESS")
+                //print("ASSESS")
                 self.assessRisk()
                 self.tableView.reloadData()
             }

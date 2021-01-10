@@ -78,7 +78,7 @@
                                             <color key="titleColor" red="0.068837437380000005" green="0.4100992067" blue="0.5295410156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="L85-x6-gHC" kind="show" id="UMp-c5-Eia"/>
+                                            <action selector="onNewPatient:" destination="zLR-vQ-blG" eventType="touchUpInside" id="UCk-rW-M13"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -107,7 +107,7 @@
         <!--New Patient-->
         <scene sceneID="To3-CG-mnG">
             <objects>
-                <viewController id="L85-x6-gHC" customClass="PatientCredentialsViewController" customModule="Prescribr" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newpatient" id="L85-x6-gHC" customClass="PatientCredentialsViewController" customModule="Prescribr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ykY-sJ-6c7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -339,7 +339,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" barStyle="black" placeholder="Search..." id="5qe-RH-l0H">
-                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="56"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="barTintColor" systemColor="secondaryLabelColor"/>

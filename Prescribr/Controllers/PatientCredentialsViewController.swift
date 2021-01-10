@@ -7,8 +7,14 @@
 
 import UIKit
 
+protocol PatientCredentialsViewControllerDelegate {
+    func addPatient(_ patient: Patient)
+}
+
 class PatientCredentialsViewController: UIViewController {
 
+    var delegate: PatientCredentialsViewControllerDelegate?
+    
     @IBOutlet var firstname: UITextField!
     @IBOutlet var lastname: UITextField!
     @IBOutlet var weight: UITextField!
@@ -48,6 +54,7 @@ class PatientCredentialsViewController: UIViewController {
             PatientService().addPatient(patientDTO: patientDTO) { (success, fail) in
                 if(fail == nil){
                     print(success!)
+                    self.delegate?.addPatient(success!)
                 } else {
                     print(fail!)
                 }

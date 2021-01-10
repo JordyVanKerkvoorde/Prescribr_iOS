@@ -55,7 +55,6 @@ class PatientsTableViewController: UIViewController, UITableViewDelegate, UITabl
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowPatientsDetails" {
             let detailViewController = segue.destination as! PatientsDetailViewController
-            
             let index = (self.tableView.indexPathForSelectedRow?.item)!
             let patient = filteredPatients[index]
             
@@ -78,5 +77,24 @@ class PatientsTableViewController: UIViewController, UITableViewDelegate, UITabl
         
         self.tableView.reloadData()
     }
+    
+    func addNewPatient(patient: Patient){
+        patients.append(patient)
+        filteredPatients.append(patient)
+        tableView.reloadData()
+    }
+    
+    @IBAction func onNewPatient(_ sender: Any) {
+        let vc = UIStoryboard(name: "Patients", bundle: nil).instantiateViewController(withIdentifier: "newpatient") as! PatientCredentialsViewController
+        vc.delegate = self
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 
+}
+
+extension PatientsTableViewController: PatientCredentialsViewControllerDelegate {
+    func addPatient(_ patient: Patient) {
+        self.addNewPatient(patient: patient)
+    }
 }
