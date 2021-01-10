@@ -45,17 +45,8 @@ class PatientsDetailViewController: UIViewController, UITableViewDelegate, UITab
             }
             
         }
-        PatientService().assessRisk(patientId: self.patient!.id){ (success, fail) in
-            if success != nil {
-                print(success!)
-                self.risks = success!
-            }
-            if fail != nil {
-                print("Request failed")
-            }
-            print("RISK DONE")
-            self.tableView.reloadData()
-        }
+        print("test")
+        assessRisk()
     }
     
     fileprivate func tableViewSetup() {
@@ -76,15 +67,31 @@ class PatientsDetailViewController: UIViewController, UITableViewDelegate, UITab
         return drugs.count
     }
     
+    fileprivate func assessRisk() {
+        PatientService().assessRisk(patientId: self.patient!.id){ (success, fail) in
+            if success != nil {
+                print(success!)
+                self.risks = success!
+            }
+            if fail != nil {
+                print("Request failed")
+            }
+            print("RISK DONE")
+            self.tableView.reloadData()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PatientDrugCell", for: indexPath) as! PatientDrugCell
         //print(drugs[indexPath.item].name)
         cell.setDrugname(name: drugs[indexPath.item].name)
         
-        if(risks.count != 0){
-            let isBad: Bool = risks[drugs[indexPath.item].id] as! Int == 1
-            //cell.backgroundColor = isBad ? .red : .green
-            cell.setRiskStyle(isRisk: isBad)
+        if(risks.count != 0 && !drugs.isEmpty){
+            print(risks)
+            if(risks[drugs[indexPath.item].id] != nil){
+                let isBad: Bool = risks[drugs[indexPath.item].id] as! Int == 1
+                cell.setRiskStyle(isRisk: isBad)
+            }
         }
         
                 
@@ -99,5 +106,38 @@ class PatientsDetailViewController: UIViewController, UITableViewDelegate, UITab
         let day = dateArr[2]
         
         return "\(day)/\(month)/\(year)"
+    }
+    
+    
+    @IBAction func onPrescribe(_ sender: Any) {
+        let vc = UIStoryboard(name: "Patients", bundle: nil).instantiateViewController(withIdentifier: "prescribe") as! PrescribeDrugTableViewController
+        //let controller = PrescribeDrugTableViewController()
+        vc.delegate = self
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func prescribeDrug(drug: Drug){
+        print(drug)
+        self.drugs.append(drug)
+        self.patient?.drugs?.append(drug.id)
+        //do network call
+        PatientService().updatePatient(patient: patient!){ (success, fail) in
+            if(success != nil){
+                print(success!)
+                //redo checks
+                print("ASSESS")
+                self.assessRisk()
+                self.tableView.reloadData()
+            }
+            if(fail != nil){
+                print(fail!)
+            }
+        }
+    }
+}
+
+extension PatientsDetailViewController: PrescribeDrugTableViewControllerDelegate {
+    func addDrug(_ drug: Drug) {
+        self.prescribeDrug(drug: drug)
     }
 }

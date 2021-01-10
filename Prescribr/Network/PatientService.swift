@@ -49,6 +49,7 @@ class PatientService {
     }
     
     func addPatient(patientDTO: PatientDTO, completion: @escaping PatientServiceResponse){
+        print("ADD")
         AF.request(baseURL + "/patient/addpatient",
                    method: .post,
                    parameters: patientDTO,
@@ -64,6 +65,9 @@ class PatientService {
                         debugPrint(error)
                         completion(nil, error)
                 }
+            }
+            .cURLDescription{ description in
+                print(description)
             }
     }
     

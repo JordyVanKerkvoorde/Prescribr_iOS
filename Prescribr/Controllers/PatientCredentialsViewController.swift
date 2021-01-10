@@ -73,7 +73,7 @@ class PatientCredentialsViewController: UIViewController {
     
     func convertDate() -> String{
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-mm-dd"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         
         return dateFormatter.string(from: datePicker.date)
     }

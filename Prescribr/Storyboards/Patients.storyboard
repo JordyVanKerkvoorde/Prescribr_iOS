@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NN1-rT-31a">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eq7-t9-C2l">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="663"/>
@@ -71,7 +71,7 @@
                                         </prototypes>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2r-s0-RmM">
-                                        <rect key="frame" x="0.0" y="683" width="414" height="42"/>
+                                        <rect key="frame" x="0.0" y="673" width="414" height="0.0"/>
                                         <color key="backgroundColor" red="0.40889925110000003" green="1" blue="0.77430693279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <state key="normal" title="NEW PATIENT">
@@ -243,7 +243,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bgc-0x-vkG">
-                                        <rect key="frame" x="0.0" y="180" width="414" height="493"/>
+                                        <rect key="frame" x="0.0" y="180" width="414" height="110"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DRUGS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EU2-bj-ntc" customClass="PaddingLabel" customModule="PaddingLabel">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -263,7 +263,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3oq-d5-89S">
-                                                <rect key="frame" x="0.0" y="60" width="414" height="433"/>
+                                                <rect key="frame" x="0.0" y="60" width="414" height="50"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PatientDrugCell" id="DNg-xT-t8H" customClass="PatientDrugCell" customModule="Prescribr" customModuleProvider="target">
@@ -276,14 +276,14 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcG-6L-Awb">
                                                                     <rect key="frame" x="20" y="11" width="374" height="24"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </tableViewCellContentView>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <connections>
                                                             <outlet property="drugname" destination="RcG-6L-Awb" id="tye-Nb-LDW"/>
                                                         </connections>
@@ -292,6 +292,17 @@
                                             </tableView>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EA4-N0-2Iv">
+                                        <rect key="frame" x="0.0" y="290" width="414" height="383"/>
+                                        <color key="backgroundColor" red="0.40889925110000003" green="1" blue="0.77430693279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <state key="normal" title="PRESCRIBE DRUG">
+                                            <color key="titleColor" red="0.068837437380000005" green="0.4100992067" blue="0.5295410156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onPrescribe:" destination="zVo-7E-0QZ" eventType="touchUpInside" id="OF7-R0-fYL"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -318,6 +329,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6e-pg-0UU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4031.884057971015" y="889.95535714285711"/>
+        </scene>
+        <!--Prescribe Drug Table View Controller-->
+        <scene sceneID="yZP-84-dld">
+            <objects>
+                <tableViewController storyboardIdentifier="prescribe" id="6YZ-fY-OC1" customClass="PrescribeDrugTableViewController" customModule="Prescribr" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iVf-Bv-ZNn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" barStyle="black" placeholder="Search..." id="5qe-RH-l0H">
+                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="56"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="barTintColor" systemColor="secondaryLabelColor"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="drug" id="E8V-F4-Vxh">
+                                <rect key="frame" x="0.0" y="84" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E8V-F4-Vxh" id="V33-EV-MnV">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6YZ-fY-OC1" id="T8B-w2-PbY"/>
+                            <outlet property="delegate" destination="6YZ-fY-OC1" id="h8T-bw-n2f"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="PhM-Xj-CsU"/>
+                    <connections>
+                        <outlet property="searchBar" destination="5qe-RH-l0H" id="r7u-S7-NVf"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L29-g2-8YT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4955" y="890"/>
         </scene>
         <!--PATIENTS-->
         <scene sceneID="b1q-zO-5AB">
@@ -356,6 +406,9 @@
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

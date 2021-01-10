@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8C2D132725AA5D2D00520424 /* DrugRisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2D132625AA5D2D00520424 /* DrugRisk.swift */; };
+		8C2DEFF125AB057A00C324D6 /* PrescribeDrugTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2DEFF025AB057A00C324D6 /* PrescribeDrugTableViewController.swift */; };
 		8C2EFD1D25801364009C24EF /* Drugs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2EFD1C25801364009C24EF /* Drugs.storyboard */; };
 		8C2EFD2025801379009C24EF /* Patients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2EFD1F25801379009C24EF /* Patients.storyboard */; };
 		8C2EFD232580138B009C24EF /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2EFD222580138B009C24EF /* Settings.storyboard */; };
@@ -40,6 +41,7 @@
 		3ABC47EEB26FB492439210D3 /* Pods-Prescribr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prescribr.debug.xcconfig"; path = "Target Support Files/Pods-Prescribr/Pods-Prescribr.debug.xcconfig"; sourceTree = "<group>"; };
 		5D1F352B3C6B5D76D0398E6F /* Pods_Prescribr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prescribr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2D132625AA5D2D00520424 /* DrugRisk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugRisk.swift; sourceTree = "<group>"; };
+		8C2DEFF025AB057A00C324D6 /* PrescribeDrugTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescribeDrugTableViewController.swift; sourceTree = "<group>"; };
 		8C2EFD1C25801364009C24EF /* Drugs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Drugs.storyboard; sourceTree = "<group>"; };
 		8C2EFD1F25801379009C24EF /* Patients.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Patients.storyboard; sourceTree = "<group>"; };
 		8C2EFD222580138B009C24EF /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				8C2EFD622598CF04009C24EF /* DrugsTableViewController.swift */,
 				8C606775259A530C00A15DEB /* DrugDetailsViewController.swift */,
 				8C60677E259CCAC500A15DEB /* PatientCredentialsViewController.swift */,
+				8C2DEFF025AB057A00C324D6 /* PrescribeDrugTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				8C2EFD3D25813507009C24EF /* SettingsViewController.swift in Sources */,
 				8C2EFD632598CF04009C24EF /* DrugsTableViewController.swift in Sources */,
 				8C2EFD5A25843679009C24EF /* PatientCell.swift in Sources */,
+				8C2DEFF125AB057A00C324D6 /* PrescribeDrugTableViewController.swift in Sources */,
 				8C5AF0F9257FFFA600F480A1 /* AppDelegate.swift in Sources */,
 				8C2EFD522583E9A6009C24EF /* Patient.swift in Sources */,
 				8C2EFD462583D1D4009C24EF /* PatientService.swift in Sources */,
