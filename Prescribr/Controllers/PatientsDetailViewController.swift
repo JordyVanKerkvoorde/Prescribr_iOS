@@ -21,6 +21,7 @@ class PatientsDetailViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet var drugsTitle: PaddingLabel!
     
     var drugs: [Drug] = []
+    var risks: NSDictionary = NSDictionary()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,21 +31,31 @@ class PatientsDetailViewController: UIViewController, UITableViewDelegate, UITab
         tableViewSetup()
         
         setLabelData()
-        //if(patient?.drugs != nil){
-            DrugService().getDrugList(idList: (patient?.drugs)!){ (success, fail) in
-                if success != nil {
-                    self.drugs = success ?? []
-                }
-                if fail != nil {
-                    print("Request failed")
-                }
-                self.tableView.reloadData()
-                if(self.drugs.isEmpty){
-                    self.tableView.isHidden = true
-                    self.drugsTitle.isHidden = true
-                }
+        DrugService().getDrugList(idList: (patient?.drugs)!){ (success, fail) in
+            if success != nil {
+                self.drugs = success ?? []
             }
-        //}
+            if fail != nil {
+                print("Request failed")
+            }
+            self.tableView.reloadData()
+            if(self.drugs.isEmpty){
+                self.tableView.isHidden = true
+                self.drugsTitle.isHidden = true
+            }
+            
+        }
+        PatientService().assessRisk(patientId: self.patient!.id){ (success, fail) in
+            if success != nil {
+                print(success!)
+                self.risks = success!
+            }
+            if fail != nil {
+                print("Request failed")
+            }
+            print("RISK DONE")
+            self.tableView.reloadData()
+        }
     }
     
     fileprivate func tableViewSetup() {
@@ -62,8 +73,6 @@ class PatientsDetailViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //print(drugs)
-        //print(drugs.count)
         return drugs.count
     }
     
@@ -72,8 +81,13 @@ class PatientsDetailViewController: UIViewController, UITableViewDelegate, UITab
         //print(drugs[indexPath.item].name)
         cell.setDrugname(name: drugs[indexPath.item].name)
         
+        if(risks.count != 0){
+            let isBad: Bool = risks[drugs[indexPath.item].id] as! Int == 1
+            //cell.backgroundColor = isBad ? .red : .green
+            cell.setRiskStyle(isRisk: isBad)
+        }
         
-        
+                
         return cell
     }
     

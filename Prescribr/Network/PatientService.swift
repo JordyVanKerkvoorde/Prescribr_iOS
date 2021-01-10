@@ -24,6 +24,7 @@ class PatientService {
     
     typealias PatientsServiceResponse = ([Patient]?, Error?) -> Void
     typealias PatientServiceResponse = (Patient?, Error?) -> Void
+    typealias RiskServiceResponse = (NSDictionary?, Error?) -> Void
     
     func getPatients(completion: @escaping PatientsServiceResponse){
         AF.request(baseURL + "/patient/allpatients",
@@ -84,6 +85,30 @@ class PatientService {
                 }
             }
     }
+    
+    func assessRisk(patientId: String, completion: @escaping RiskServiceResponse){
+        let dto = RiskDTO(patientID: patientId)
+        AF.request(baseURL + "/patient/assessrisk",
+                   method: .post,
+                   parameters: dto,
+                   encoder: JSONParameterEncoder.default,
+                   headers: headers)
+            .validate()
+            .responseJSON{ response in
+                switch response.result{
+                    case .success:
+                        //print(response.value!)
+                        completion(response.value as? NSDictionary, nil)
+                    case let .failure(error):
+                        debugPrint(error)
+                        completion(nil, error)
+                }
+            }
+    }
+}
+
+struct RiskDTO: Encodable {
+    let patientID: String
 }
 
 

@@ -14,4 +14,8 @@ class PatientDrugCell: UITableViewCell {
     func setDrugname(name: String) {
         drugname.text = name
     }
+    
+    func setRiskStyle(isRisk: Bool){
+        drugname.textColor = isRisk ? .red : .green
+    }
 }

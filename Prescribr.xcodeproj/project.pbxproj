@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C2D132725AA5D2D00520424 /* DrugRisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2D132625AA5D2D00520424 /* DrugRisk.swift */; };
 		8C2EFD1D25801364009C24EF /* Drugs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2EFD1C25801364009C24EF /* Drugs.storyboard */; };
 		8C2EFD2025801379009C24EF /* Patients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2EFD1F25801379009C24EF /* Patients.storyboard */; };
 		8C2EFD232580138B009C24EF /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2EFD222580138B009C24EF /* Settings.storyboard */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		3ABC47EEB26FB492439210D3 /* Pods-Prescribr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prescribr.debug.xcconfig"; path = "Target Support Files/Pods-Prescribr/Pods-Prescribr.debug.xcconfig"; sourceTree = "<group>"; };
 		5D1F352B3C6B5D76D0398E6F /* Pods_Prescribr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prescribr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C2D132625AA5D2D00520424 /* DrugRisk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugRisk.swift; sourceTree = "<group>"; };
 		8C2EFD1C25801364009C24EF /* Drugs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Drugs.storyboard; sourceTree = "<group>"; };
 		8C2EFD1F25801379009C24EF /* Patients.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Patients.storyboard; sourceTree = "<group>"; };
 		8C2EFD222580138B009C24EF /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				8C2EFD5925843679009C24EF /* PatientCell.swift */,
 				8C2EFD5C2597C262009C24EF /* PatientDrugCell.swift */,
 				8C606781259CCFB900A15DEB /* PatientDTO.swift */,
+				8C2D132625AA5D2D00520424 /* DrugRisk.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				8C2EFD522583E9A6009C24EF /* Patient.swift in Sources */,
 				8C2EFD462583D1D4009C24EF /* PatientService.swift in Sources */,
 				8C2EFD3625811E2D009C24EF /* RegisterViewController.swift in Sources */,
+				8C2D132725AA5D2D00520424 /* DrugRisk.swift in Sources */,
 				8C2EFD5D2597C262009C24EF /* PatientDrugCell.swift in Sources */,
 				8C606782259CCFB900A15DEB /* PatientDTO.swift in Sources */,
 				8C606776259A530C00A15DEB /* DrugDetailsViewController.swift in Sources */,
