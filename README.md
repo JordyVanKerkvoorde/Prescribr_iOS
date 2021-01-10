@@ -1,5 +1,5 @@
 # Prescribr
-Prescribr is an app that lets you manage the drugs a doctor describes to his patient.  
+Prescribr is an app that lets you manage the drugs a doctor prescribes to his patient.  
 Many drugs have negative interactions when using them in combination. When you take just two different drugs, the interactions are quiet easy to determine by memory.  
 When using 4 or more drugs this gets exponentially difficult. When a doctor makes a mistake in determining if the medication he wants to prescribe will be harmful or not, this can be a costly one, human lives are at stake.  
   
